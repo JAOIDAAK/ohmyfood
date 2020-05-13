@@ -1,0 +1,514 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  margin: 0; }
+
+/* mise en page header+footer+prochainement */
+#header {
+  background-color: #579c87;
+  font-size: 3.3rem;
+  text-align: center;
+  font-weight: bolder;
+  padding: 5px 0px 5px 0px; }
+  #header a {
+    text-decoration: none; }
+
+#footer {
+  background: #579C87;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif; }
+  #footer a {
+    margin: 1rem;
+    text-decoration: none;
+    color: #fcca46; }
+  #footer a:hover {
+    animation: wiggle 500ms infinite; }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg); }
+  25% {
+    transform: rotate(10deg); }
+  50% {
+    transform: rotate(-10deg); }
+  75% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-5deg); } }
+@-webkit-keyframes wiggle {
+  0% {
+    transform: rotate(-5deg); }
+  25% {
+    transform: rotate(10deg); }
+  50% {
+    transform: rotate(-10deg); }
+  75% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-5deg); } }
+#loading {
+  font-size: 2em;
+  background-color: #579c87;
+  margin: auto;
+  width: 270px;
+  border-radius: 10px;
+  color: #fdcb46;
+  display: flex;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+  margin-left: 5px; }
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em; } }
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em; } }
+/* mise en page general des menus+ accueil */
+.menu1 {
+  background-color: #fde0dc;
+  font-family: 'Kalam', cursive; }
+
+.menu2 {
+  background-color: #fff5fe;
+  font-family: 'Roboto', sans-serif; }
+  .menu2 .gradient {
+    background: linear-gradient(to right, #C77427, #8E57FC);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.menu3 {
+  background-color: #edefee;
+  font-family: 'Parisienne', cursive; }
+  .menu3 .gradient {
+    background: linear-gradient(to right, #1541DE, #0665f0, #2c94f0, #80c8fc);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+
+.menu4 {
+  background-color: #fdfffc;
+  font-family: 'Dancing Script', cursive; }
+  .menu4 .gradient {
+    background: linear-gradient(to right, #489b40, #75c158, #9ae16c, #beff7f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+
+.menu_titre {
+  color: black;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1000ms; }
+  .menu_titre:hover {
+    transform: scale(1.15); }
+
+/* mise en page Acceuil */
+.presentation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; }
+  .presentation .menu1-2, .presentation .menu3-4 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .presentation .menu1-2 .menu1, .presentation .menu1-2 .menu2, .presentation .menu1-2 .menu3, .presentation .menu1-2 .menu4, .presentation .menu3-4 .menu1, .presentation .menu3-4 .menu2, .presentation .menu3-4 .menu3, .presentation .menu3-4 .menu4 {
+      width: 450px;
+      height: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #706f6f;
+      margin-bottom: 80px; }
+    .presentation .menu1-2 .menu1 i, .presentation .menu3-4 .menu1 i {
+      display: block;
+      margin: auto;
+      margin-top: 150px;
+      font-size: 70px;
+      text-align: center;
+      color: #f6916a; }
+    .presentation .menu1-2 .menu1 h2, .presentation .menu3-4 .menu1 h2 {
+      font-size: 2.3rem; }
+    .presentation .menu1-2 .menu1 h3, .presentation .menu3-4 .menu1 h3 {
+      font-size: 3rem; }
+    .presentation .menu1-2 .menu1 a, .presentation .menu3-4 .menu1 a {
+      color: #000; }
+    .presentation .menu1-2 .menu2 h2, .presentation .menu1-2 .menu3 h2, .presentation .menu1-2 .menu4 h2, .presentation .menu3-4 .menu2 h2, .presentation .menu3-4 .menu3 h2, .presentation .menu3-4 .menu4 h2 {
+      font-size: 2.3rem;
+      text-align: center;
+      margin-top: 250px; }
+    .presentation .menu1-2 .menu2 h3, .presentation .menu1-2 .menu3 h3, .presentation .menu1-2 .menu4 h3, .presentation .menu3-4 .menu2 h3, .presentation .menu3-4 .menu3 h3, .presentation .menu3-4 .menu4 h3 {
+      font-size: 3rem;
+      text-align: center;
+      color: #c77412; }
+    .presentation .menu1-2 a, .presentation .menu3-4 a {
+      text-decoration: none;
+      text-align: center; }
+
+/* mise en page general des menus */
+#contenair {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #706f6f; }
+  #contenair .liste_entrée, #contenair .liste_plat, #contenair .liste_dessert {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 0px; }
+    #contenair .liste_entrée .entrée, #contenair .liste_entrée .plat, #contenair .liste_entrée .dessert, #contenair .liste_plat .entrée, #contenair .liste_plat .plat, #contenair .liste_plat .dessert, #contenair .liste_dessert .entrée, #contenair .liste_dessert .plat, #contenair .liste_dessert .dessert {
+      margin-left: 120px;
+      font-size: 20px; }
+    #contenair .liste_entrée .prix_entrée, #contenair .liste_entrée .prix_plat, #contenair .liste_entrée .prix_dessert, #contenair .liste_plat .prix_entrée, #contenair .liste_plat .prix_plat, #contenair .liste_plat .prix_dessert, #contenair .liste_dessert .prix_entrée, #contenair .liste_dessert .prix_plat, #contenair .liste_dessert .prix_dessert {
+      margin-right: 120px;
+      font-size: 20px; }
+    #contenair .liste_entrée li, #contenair .liste_plat li, #contenair .liste_dessert li {
+      list-style-type: none;
+      margin-bottom: 30px; }
+
+h3 {
+  text-align: center;
+  font-size: 30px; }
+
+h4 {
+  font-size: 25px; }
+
+.titre_entrée, .titre_plat, .titre_dessert {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  .titre_entrée img, .titre_plat img, .titre_dessert img {
+    width: 280px;
+    height: 40px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto; }
+
+h2 {
+  text-align: center;
+  font-size: 30px; }
+
+/* mise en page menu1 */
+#contenair .menu1 .titre_entrée h4, #contenair .menu1 .titre_plat h4, #contenair .menu1 .titre_dessert h4 {
+  background: linear-gradient(to top, black 0%, black 2px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size .3s; }
+  #contenair .menu1 .titre_entrée h4:hover, #contenair .menu1 .titre_plat h4:hover, #contenair .menu1 .titre_dessert h4:hover {
+    background-size: 100% 100%; }
+#contenair .menu1 .titre i {
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  font-size: 70px;
+  text-align: center;
+  color: #f6916a; }
+#contenair .menu1 .menu i {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #f6916a; }
+
+/* mise en page menu2 */
+#contenair .menu2 .titre_entrée, #contenair .menu2 .liste_entrée {
+  color: #c67412; }
+  #contenair .menu2 .titre_entrée h4, #contenair .menu2 .liste_entrée h4 {
+    background: linear-gradient(to top, #c67412 0%, #c67412 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s; }
+    #contenair .menu2 .titre_entrée h4:hover, #contenair .menu2 .liste_entrée h4:hover {
+      background-size: 100% 100%; }
+#contenair .menu2 .titre_plat, #contenair .menu2 .liste_plat {
+  color: #a56799; }
+  #contenair .menu2 .titre_plat h4, #contenair .menu2 .liste_plat h4 {
+    background: linear-gradient(to top, #a56799 0%, #a56799 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s; }
+    #contenair .menu2 .titre_plat h4:hover, #contenair .menu2 .liste_plat h4:hover {
+      background-size: 100% 100%; }
+#contenair .menu2 .titre_dessert, #contenair .menu2 .liste_dessert {
+  color: #6e4ccc; }
+  #contenair .menu2 .titre_dessert h4, #contenair .menu2 .liste_dessert h4 {
+    background: linear-gradient(to top, #6e4ccc 0%, #6e4ccc 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .3s; }
+    #contenair .menu2 .titre_dessert h4:hover, #contenair .menu2 .liste_dessert h4:hover {
+      background-size: 100% 100%; }
+
+/* mise en page menu3 */
+#contenair .menu3 .titre_entrée h4 {
+  background: linear-gradient(to top, #0228dd 0%, #0228dd 2px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size .3s; }
+  #contenair .menu3 .titre_entrée h4:hover {
+    background-size: 100% 100%; }
+#contenair .menu3 .titre_plat h4 {
+  background: linear-gradient(to top, #0670f3 0%, #0670f3 2px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size .3s; }
+  #contenair .menu3 .titre_plat h4:hover {
+    background-size: 100% 100%; }
+#contenair .menu3 .titre_dessert h4 {
+  background: linear-gradient(to top, #229df9 0%, #229df9 2px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size .3s; }
+  #contenair .menu3 .titre_dessert h4:hover {
+    background-size: 100% 100%; }
+
+/* mise en page menu4 */
+#contenair .menu4 .titre_entrée h4, #contenair .menu4 .titre_plat h4, #contenair .menu4 .titre_dessert h4 {
+  background: linear-gradient(to top, #60af4d 0%, #60af4d 2px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size .3s; }
+  #contenair .menu4 .titre_entrée h4:hover, #contenair .menu4 .titre_plat h4:hover, #contenair .menu4 .titre_dessert h4:hover {
+    background-size: 100% 100%; }
+
+@media all and (max-width: 1064px) {
+  body {
+    width: 100%;
+    margin: 0; }
+
+  #contenair {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex; }
+    #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+      width: 80%;
+      height: auto; }
+    #contenair .liste_entrée .entrée, #contenair .liste_entrée .plat, #contenair .liste_entrée .dessert, #contenair .liste_plat .entrée, #contenair .liste_plat .plat, #contenair .liste_plat .dessert, #contenair .liste_dessert .entrée, #contenair .liste_dessert .plat, #contenair .liste_dessert .dessert {
+      margin-left: 80px;
+      font-size: 18px; }
+    #contenair .liste_entrée .prix_entrée, #contenair .liste_entrée .prix_plat, #contenair .liste_entrée .prix_dessert, #contenair .liste_plat .prix_entrée, #contenair .liste_plat .prix_plat, #contenair .liste_plat .prix_dessert, #contenair .liste_dessert .prix_entrée, #contenair .liste_dessert .prix_plat, #contenair .liste_dessert .prix_dessert {
+      margin-right: 80px;
+      font-size: 20px; }
+    #contenair img {
+      width: 250px;
+      height: 40px;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    #contenair h4 {
+      font-size: 18px;
+      margin-top: 35px;
+      margin-bottom: 30px; } }
+@media all and (max-width: 840px) {
+  #contenair {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex; }
+    #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+      width: 80%;
+      height: auto; }
+    #contenair .liste_entrée .entrée, #contenair .liste_entrée .plat, #contenair .liste_entrée .dessert, #contenair .liste_plat .entrée, #contenair .liste_plat .plat, #contenair .liste_plat .dessert, #contenair .liste_dessert .entrée, #contenair .liste_dessert .plat, #contenair .liste_dessert .dessert {
+      margin-left: 10px;
+      font-size: 18px; }
+    #contenair .liste_entrée .prix_entrée, #contenair .liste_entrée .prix_plat, #contenair .liste_entrée .prix_dessert, #contenair .liste_plat .prix_entrée, #contenair .liste_plat .prix_plat, #contenair .liste_plat .prix_dessert, #contenair .liste_dessert .prix_entrée, #contenair .liste_dessert .prix_plat, #contenair .liste_dessert .prix_dessert {
+      margin-right: 10px;
+      font-size: 20px; }
+    #contenair img {
+      width: 180px;
+      height: 40px;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    #contenair h4 {
+      font-size: 18px;
+      margin-top: 35px;
+      margin-bottom: 30px; } }
+@media all and (max-width: 768px) {
+  #contenair {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex; }
+    #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+      width: 80%;
+      height: auto; }
+    #contenair .liste_entrée .entrée, #contenair .liste_entrée .plat, #contenair .liste_entrée .dessert, #contenair .liste_plat .entrée, #contenair .liste_plat .plat, #contenair .liste_plat .dessert, #contenair .liste_dessert .entrée, #contenair .liste_dessert .plat, #contenair .liste_dessert .dessert {
+      margin-left: 40px;
+      font-size: 15px; }
+    #contenair .liste_entrée .prix_entrée, #contenair .liste_entrée .prix_plat, #contenair .liste_entrée .prix_dessert, #contenair .liste_plat .prix_entrée, #contenair .liste_plat .prix_plat, #contenair .liste_plat .prix_dessert, #contenair .liste_dessert .prix_entrée, #contenair .liste_dessert .prix_plat, #contenair .liste_dessert .prix_dessert {
+      margin-right: 40px;
+      font-size: 15px; }
+    #contenair img {
+      width: 180px;
+      height: 40px;
+      margin-top: 35px;
+      margin-bottom: 20px; }
+    #contenair h4 {
+      font-size: 16px; } }
+@media all and (max-width: 680px) {
+  #footer {
+    font-size: 20px; }
+
+  #loading {
+    width: 130px;
+    font-size: 20px;
+    text-align: center; }
+
+  .presentation {
+    margin-top: 50px; }
+    .presentation .menu1, .presentation .menu2, .presentation .menu3, .presentation .menu4 {
+      width: 280px;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #706f6f;
+      margin-bottom: 50px; }
+    .presentation .menu1-2 .menu1 i, .presentation .menu3-4 .menu1 i {
+      display: block;
+      margin: auto;
+      margin-top: 100px;
+      font-size: 50px;
+      text-align: center;
+      color: #f6916a; }
+    .presentation .menu1-2 .menu1 h2, .presentation .menu3-4 .menu1 h2 {
+      font-size: 25px; }
+    .presentation .menu1-2 .menu2 h2, .presentation .menu1-2 .menu3 h2, .presentation .menu1-2 .menu4 h2, .presentation .menu3-4 .menu2 h2, .presentation .menu3-4 .menu3 h2, .presentation .menu3-4 .menu4 h2 {
+      font-size: 25px;
+      text-align: center;
+      margin-top: 180px; }
+    .presentation .menu1-2 h3, .presentation .menu3-4 h3 {
+      font-size: 30px; }
+
+  .titre i {
+    margin-top: 20px;
+    font-size: 40px; }
+
+  .menu i {
+    font-size: 25px;
+    margin-bottom: 0px; }
+
+  #contenair {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex; }
+    #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+      width: 90%;
+      height: auto; }
+      #contenair .menu1 .liste_entrée li, #contenair .menu1 .liste_plat li, #contenair .menu1 .liste_dessert li, #contenair .menu2 .liste_entrée li, #contenair .menu2 .liste_plat li, #contenair .menu2 .liste_dessert li, #contenair .menu3 .liste_entrée li, #contenair .menu3 .liste_plat li, #contenair .menu3 .liste_dessert li, #contenair .menu4 .liste_entrée li, #contenair .menu4 .liste_plat li, #contenair .menu4 .liste_dessert li {
+        margin-bottom: 20px;
+        text-align: center; }
+      #contenair .menu1 .liste_entrée .entrée, #contenair .menu1 .liste_entrée .plat, #contenair .menu1 .liste_entrée .dessert, #contenair .menu1 .liste_plat .entrée, #contenair .menu1 .liste_plat .plat, #contenair .menu1 .liste_plat .dessert, #contenair .menu1 .liste_dessert .entrée, #contenair .menu1 .liste_dessert .plat, #contenair .menu1 .liste_dessert .dessert, #contenair .menu2 .liste_entrée .entrée, #contenair .menu2 .liste_entrée .plat, #contenair .menu2 .liste_entrée .dessert, #contenair .menu2 .liste_plat .entrée, #contenair .menu2 .liste_plat .plat, #contenair .menu2 .liste_plat .dessert, #contenair .menu2 .liste_dessert .entrée, #contenair .menu2 .liste_dessert .plat, #contenair .menu2 .liste_dessert .dessert, #contenair .menu3 .liste_entrée .entrée, #contenair .menu3 .liste_entrée .plat, #contenair .menu3 .liste_entrée .dessert, #contenair .menu3 .liste_plat .entrée, #contenair .menu3 .liste_plat .plat, #contenair .menu3 .liste_plat .dessert, #contenair .menu3 .liste_dessert .entrée, #contenair .menu3 .liste_dessert .plat, #contenair .menu3 .liste_dessert .dessert, #contenair .menu4 .liste_entrée .entrée, #contenair .menu4 .liste_entrée .plat, #contenair .menu4 .liste_entrée .dessert, #contenair .menu4 .liste_plat .entrée, #contenair .menu4 .liste_plat .plat, #contenair .menu4 .liste_plat .dessert, #contenair .menu4 .liste_dessert .entrée, #contenair .menu4 .liste_dessert .plat, #contenair .menu4 .liste_dessert .dessert {
+        font-size: 12px;
+        margin-left: 20px; }
+      #contenair .menu1 .liste_entrée .prix_entrée, #contenair .menu1 .liste_entrée .prix_plat, #contenair .menu1 .liste_entrée .prix_dessert, #contenair .menu1 .liste_plat .prix_entrée, #contenair .menu1 .liste_plat .prix_plat, #contenair .menu1 .liste_plat .prix_dessert, #contenair .menu1 .liste_dessert .prix_entrée, #contenair .menu1 .liste_dessert .prix_plat, #contenair .menu1 .liste_dessert .prix_dessert, #contenair .menu2 .liste_entrée .prix_entrée, #contenair .menu2 .liste_entrée .prix_plat, #contenair .menu2 .liste_entrée .prix_dessert, #contenair .menu2 .liste_plat .prix_entrée, #contenair .menu2 .liste_plat .prix_plat, #contenair .menu2 .liste_plat .prix_dessert, #contenair .menu2 .liste_dessert .prix_entrée, #contenair .menu2 .liste_dessert .prix_plat, #contenair .menu2 .liste_dessert .prix_dessert, #contenair .menu3 .liste_entrée .prix_entrée, #contenair .menu3 .liste_entrée .prix_plat, #contenair .menu3 .liste_entrée .prix_dessert, #contenair .menu3 .liste_plat .prix_entrée, #contenair .menu3 .liste_plat .prix_plat, #contenair .menu3 .liste_plat .prix_dessert, #contenair .menu3 .liste_dessert .prix_entrée, #contenair .menu3 .liste_dessert .prix_plat, #contenair .menu3 .liste_dessert .prix_dessert, #contenair .menu4 .liste_entrée .prix_entrée, #contenair .menu4 .liste_entrée .prix_plat, #contenair .menu4 .liste_entrée .prix_dessert, #contenair .menu4 .liste_plat .prix_entrée, #contenair .menu4 .liste_plat .prix_plat, #contenair .menu4 .liste_plat .prix_dessert, #contenair .menu4 .liste_dessert .prix_entrée, #contenair .menu4 .liste_dessert .prix_plat, #contenair .menu4 .liste_dessert .prix_dessert {
+        font-size: 15px;
+        font-weight: bolder;
+        margin-right: 20px; }
+      #contenair .menu1 .titre_entrée img, #contenair .menu1 .titre_plat img, #contenair .menu1 .titre_dessert img, #contenair .menu2 .titre_entrée img, #contenair .menu2 .titre_plat img, #contenair .menu2 .titre_dessert img, #contenair .menu3 .titre_entrée img, #contenair .menu3 .titre_plat img, #contenair .menu3 .titre_dessert img, #contenair .menu4 .titre_entrée img, #contenair .menu4 .titre_plat img, #contenair .menu4 .titre_dessert img {
+        width: 120px;
+        height: 20px;
+        margin-top: 38px;
+        margin-bottom: 20px; }
+      #contenair .menu1 h3, #contenair .menu2 h3, #contenair .menu3 h3, #contenair .menu4 h3 {
+        font-size: 20px; }
+      #contenair .menu1 h4, #contenair .menu2 h4, #contenair .menu3 h4, #contenair .menu4 h4 {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder; }
+      #contenair .menu1 h2, #contenair .menu2 h2, #contenair .menu3 h2, #contenair .menu4 h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px; } }
+@media all and (max-width: 450px) {
+  #footer {
+    font-size: 15px; }
+
+  #loading {
+    width: 130px;
+    font-size: 15px;
+    text-align: center; }
+
+  .presentation {
+    margin-top: 50px; }
+    .presentation .menu1, .presentation .menu2, .presentation .menu3, .presentation .menu4 {
+      width: 280px;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #706f6f;
+      margin-bottom: 50px; }
+    .presentation .menu1-2 .menu1 i, .presentation .menu3-4 .menu1 i {
+      display: block;
+      margin: auto;
+      margin-top: 100px;
+      font-size: 50px;
+      text-align: center;
+      color: #f6916a; }
+    .presentation .menu1-2 .menu1 h2, .presentation .menu3-4 .menu1 h2 {
+      font-size: 25px; }
+    .presentation .menu1-2 .menu2 h2, .presentation .menu1-2 .menu3 h2, .presentation .menu1-2 .menu4 h2, .presentation .menu3-4 .menu2 h2, .presentation .menu3-4 .menu3 h2, .presentation .menu3-4 .menu4 h2 {
+      font-size: 25px;
+      text-align: center;
+      margin-top: 180px; }
+    .presentation .menu1-2 h3, .presentation .menu3-4 h3 {
+      font-size: 30px; }
+
+  .titre i {
+    margin-top: 20px;
+    font-size: 40px; }
+
+  .menu i {
+    font-size: 25px;
+    margin-bottom: 0px; }
+
+  #contenair {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex; }
+    #contenair .menu1, #contenair .menu2, #contenair .menu3, #contenair .menu4 {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #706f6f; }
+      #contenair .menu1 .liste_entrée, #contenair .menu1 .liste_plat, #contenair .menu1 .liste_dessert, #contenair .menu2 .liste_entrée, #contenair .menu2 .liste_plat, #contenair .menu2 .liste_dessert, #contenair .menu3 .liste_entrée, #contenair .menu3 .liste_plat, #contenair .menu3 .liste_dessert, #contenair .menu4 .liste_entrée, #contenair .menu4 .liste_plat, #contenair .menu4 .liste_dessert {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #contenair .menu1 .liste_entrée li, #contenair .menu1 .liste_plat li, #contenair .menu1 .liste_dessert li, #contenair .menu2 .liste_entrée li, #contenair .menu2 .liste_plat li, #contenair .menu2 .liste_dessert li, #contenair .menu3 .liste_entrée li, #contenair .menu3 .liste_plat li, #contenair .menu3 .liste_dessert li, #contenair .menu4 .liste_entrée li, #contenair .menu4 .liste_plat li, #contenair .menu4 .liste_dessert li {
+          margin-bottom: 20px;
+          text-align: center; }
+        #contenair .menu1 .liste_entrée .entrée, #contenair .menu1 .liste_entrée .plat, #contenair .menu1 .liste_entrée .dessert, #contenair .menu1 .liste_plat .entrée, #contenair .menu1 .liste_plat .plat, #contenair .menu1 .liste_plat .dessert, #contenair .menu1 .liste_dessert .entrée, #contenair .menu1 .liste_dessert .plat, #contenair .menu1 .liste_dessert .dessert, #contenair .menu2 .liste_entrée .entrée, #contenair .menu2 .liste_entrée .plat, #contenair .menu2 .liste_entrée .dessert, #contenair .menu2 .liste_plat .entrée, #contenair .menu2 .liste_plat .plat, #contenair .menu2 .liste_plat .dessert, #contenair .menu2 .liste_dessert .entrée, #contenair .menu2 .liste_dessert .plat, #contenair .menu2 .liste_dessert .dessert, #contenair .menu3 .liste_entrée .entrée, #contenair .menu3 .liste_entrée .plat, #contenair .menu3 .liste_entrée .dessert, #contenair .menu3 .liste_plat .entrée, #contenair .menu3 .liste_plat .plat, #contenair .menu3 .liste_plat .dessert, #contenair .menu3 .liste_dessert .entrée, #contenair .menu3 .liste_dessert .plat, #contenair .menu3 .liste_dessert .dessert, #contenair .menu4 .liste_entrée .entrée, #contenair .menu4 .liste_entrée .plat, #contenair .menu4 .liste_entrée .dessert, #contenair .menu4 .liste_plat .entrée, #contenair .menu4 .liste_plat .plat, #contenair .menu4 .liste_plat .dessert, #contenair .menu4 .liste_dessert .entrée, #contenair .menu4 .liste_dessert .plat, #contenair .menu4 .liste_dessert .dessert {
+          font-size: 15px;
+          margin-left: 0px; }
+        #contenair .menu1 .liste_entrée .prix_entrée, #contenair .menu1 .liste_entrée .prix_plat, #contenair .menu1 .liste_entrée .prix_dessert, #contenair .menu1 .liste_plat .prix_entrée, #contenair .menu1 .liste_plat .prix_plat, #contenair .menu1 .liste_plat .prix_dessert, #contenair .menu1 .liste_dessert .prix_entrée, #contenair .menu1 .liste_dessert .prix_plat, #contenair .menu1 .liste_dessert .prix_dessert, #contenair .menu2 .liste_entrée .prix_entrée, #contenair .menu2 .liste_entrée .prix_plat, #contenair .menu2 .liste_entrée .prix_dessert, #contenair .menu2 .liste_plat .prix_entrée, #contenair .menu2 .liste_plat .prix_plat, #contenair .menu2 .liste_plat .prix_dessert, #contenair .menu2 .liste_dessert .prix_entrée, #contenair .menu2 .liste_dessert .prix_plat, #contenair .menu2 .liste_dessert .prix_dessert, #contenair .menu3 .liste_entrée .prix_entrée, #contenair .menu3 .liste_entrée .prix_plat, #contenair .menu3 .liste_entrée .prix_dessert, #contenair .menu3 .liste_plat .prix_entrée, #contenair .menu3 .liste_plat .prix_plat, #contenair .menu3 .liste_plat .prix_dessert, #contenair .menu3 .liste_dessert .prix_entrée, #contenair .menu3 .liste_dessert .prix_plat, #contenair .menu3 .liste_dessert .prix_dessert, #contenair .menu4 .liste_entrée .prix_entrée, #contenair .menu4 .liste_entrée .prix_plat, #contenair .menu4 .liste_entrée .prix_dessert, #contenair .menu4 .liste_plat .prix_entrée, #contenair .menu4 .liste_plat .prix_plat, #contenair .menu4 .liste_plat .prix_dessert, #contenair .menu4 .liste_dessert .prix_entrée, #contenair .menu4 .liste_dessert .prix_plat, #contenair .menu4 .liste_dessert .prix_dessert {
+          font-size: 15px;
+          font-weight: bolder;
+          margin-right: 0px; }
+      #contenair .menu1 .titre_entrée, #contenair .menu1 .titre_plat, #contenair .menu1 .titre_dessert, #contenair .menu2 .titre_entrée, #contenair .menu2 .titre_plat, #contenair .menu2 .titre_dessert, #contenair .menu3 .titre_entrée, #contenair .menu3 .titre_plat, #contenair .menu3 .titre_dessert, #contenair .menu4 .titre_entrée, #contenair .menu4 .titre_plat, #contenair .menu4 .titre_dessert {
+        display: flex;
+        flex-direction: column; }
+        #contenair .menu1 .titre_entrée img, #contenair .menu1 .titre_plat img, #contenair .menu1 .titre_dessert img, #contenair .menu2 .titre_entrée img, #contenair .menu2 .titre_plat img, #contenair .menu2 .titre_dessert img, #contenair .menu3 .titre_entrée img, #contenair .menu3 .titre_plat img, #contenair .menu3 .titre_dessert img, #contenair .menu4 .titre_entrée img, #contenair .menu4 .titre_plat img, #contenair .menu4 .titre_dessert img {
+          width: 180px;
+          height: 20px;
+          margin-top: 20px;
+          margin-bottom: 20px; }
+      #contenair .menu1 h3, #contenair .menu2 h3, #contenair .menu3 h3, #contenair .menu4 h3 {
+        font-size: 20px; }
+      #contenair .menu1 h4, #contenair .menu2 h4, #contenair .menu3 h4, #contenair .menu4 h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder; }
+      #contenair .menu1 h2, #contenair .menu2 h2, #contenair .menu3 h2, #contenair .menu4 h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px; } }
+
+/*# sourceMappingURL=style.css.map */
