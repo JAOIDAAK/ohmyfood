@@ -19,8 +19,9 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  margin-top: 60px;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  bottom: 0; }
   #footer a {
     margin: 1rem;
     text-decoration: none;
@@ -29,17 +30,6 @@ body {
     animation: wiggle 500ms infinite; }
 
 @keyframes wiggle {
-  0% {
-    transform: rotate(-5deg); }
-  25% {
-    transform: rotate(10deg); }
-  50% {
-    transform: rotate(-10deg); }
-  75% {
-    transform: rotate(10deg); }
-  100% {
-    transform: rotate(-5deg); } }
-@-webkit-keyframes wiggle {
   0% {
     transform: rotate(-5deg); }
   25% {
@@ -75,9 +65,6 @@ body {
 @keyframes ellipsis {
   to {
     width: 1.25em; } }
-@-webkit-keyframes ellipsis {
-  to {
-    width: 1.25em; } }
 /* mise en page general des menus+ accueil */
 .menu1 {
   background-color: #fde0dc;
@@ -87,10 +74,9 @@ body {
   background-color: #fff5fe;
   font-family: 'Roboto', sans-serif; }
   .menu2 .gradient {
-    background: linear-gradient(to right, #C77427, #8E57FC);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    background: linear-gradient(to right, #db8d44, #8E57FC);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
 
 .menu3 {
   background-color: #edefee;
@@ -120,7 +106,8 @@ body {
 .presentation {
   display: flex;
   flex-direction: column;
-  margin-top: 80px; }
+  margin-top: 80px;
+  padding-bottom: 120px; }
   .presentation .menu1-2, .presentation .menu3-4 {
     display: flex;
     justify-content: space-evenly;
@@ -279,6 +266,24 @@ h2 {
   #contenair .menu4 .titre_entrée h4:hover, #contenair .menu4 .titre_plat h4:hover, #contenair .menu4 .titre_dessert h4:hover {
     background-size: 100% 100%; }
 
+/* mise en page mention legale */
+.mention-legale {
+  padding-bottom: 120px; }
+  .mention-legale h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold; }
+  .mention-legale h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold; }
+  .mention-legale p {
+    text-align: justify;
+    font-size: 1.5em;
+    margin-left: 30px;
+    margin-right: 30px; }
+
+/*   responsive    */
 @media all and (max-width: 1064px) {
   body {
     width: 100%;
@@ -355,7 +360,7 @@ h2 {
       font-size: 16px; } }
 @media all and (max-width: 680px) {
   #footer {
-    font-size: 20px; }
+    font-size: 24px; }
 
   #loading {
     width: 130px;
@@ -364,7 +369,7 @@ h2 {
 
   .presentation {
     margin-top: 50px; }
-    .presentation .menu1, .presentation .menu2, .presentation .menu3, .presentation .menu4 {
+    .presentation .menu1-2 .menu1, .presentation .menu1-2 .menu2, .presentation .menu1-2 .menu3, .presentation .menu1-2 .menu4, .presentation .menu3-4 .menu1, .presentation .menu3-4 .menu2, .presentation .menu3-4 .menu3, .presentation .menu3-4 .menu4 {
       width: 280px;
       height: 450px;
       border-radius: 10px;
@@ -407,16 +412,14 @@ h2 {
         text-align: center; }
       #contenair .menu1 .liste_entrée .entrée, #contenair .menu1 .liste_entrée .plat, #contenair .menu1 .liste_entrée .dessert, #contenair .menu1 .liste_plat .entrée, #contenair .menu1 .liste_plat .plat, #contenair .menu1 .liste_plat .dessert, #contenair .menu1 .liste_dessert .entrée, #contenair .menu1 .liste_dessert .plat, #contenair .menu1 .liste_dessert .dessert, #contenair .menu2 .liste_entrée .entrée, #contenair .menu2 .liste_entrée .plat, #contenair .menu2 .liste_entrée .dessert, #contenair .menu2 .liste_plat .entrée, #contenair .menu2 .liste_plat .plat, #contenair .menu2 .liste_plat .dessert, #contenair .menu2 .liste_dessert .entrée, #contenair .menu2 .liste_dessert .plat, #contenair .menu2 .liste_dessert .dessert, #contenair .menu3 .liste_entrée .entrée, #contenair .menu3 .liste_entrée .plat, #contenair .menu3 .liste_entrée .dessert, #contenair .menu3 .liste_plat .entrée, #contenair .menu3 .liste_plat .plat, #contenair .menu3 .liste_plat .dessert, #contenair .menu3 .liste_dessert .entrée, #contenair .menu3 .liste_dessert .plat, #contenair .menu3 .liste_dessert .dessert, #contenair .menu4 .liste_entrée .entrée, #contenair .menu4 .liste_entrée .plat, #contenair .menu4 .liste_entrée .dessert, #contenair .menu4 .liste_plat .entrée, #contenair .menu4 .liste_plat .plat, #contenair .menu4 .liste_plat .dessert, #contenair .menu4 .liste_dessert .entrée, #contenair .menu4 .liste_dessert .plat, #contenair .menu4 .liste_dessert .dessert {
         font-size: 12px;
-        margin-left: 20px; }
+        margin-left: 60px; }
       #contenair .menu1 .liste_entrée .prix_entrée, #contenair .menu1 .liste_entrée .prix_plat, #contenair .menu1 .liste_entrée .prix_dessert, #contenair .menu1 .liste_plat .prix_entrée, #contenair .menu1 .liste_plat .prix_plat, #contenair .menu1 .liste_plat .prix_dessert, #contenair .menu1 .liste_dessert .prix_entrée, #contenair .menu1 .liste_dessert .prix_plat, #contenair .menu1 .liste_dessert .prix_dessert, #contenair .menu2 .liste_entrée .prix_entrée, #contenair .menu2 .liste_entrée .prix_plat, #contenair .menu2 .liste_entrée .prix_dessert, #contenair .menu2 .liste_plat .prix_entrée, #contenair .menu2 .liste_plat .prix_plat, #contenair .menu2 .liste_plat .prix_dessert, #contenair .menu2 .liste_dessert .prix_entrée, #contenair .menu2 .liste_dessert .prix_plat, #contenair .menu2 .liste_dessert .prix_dessert, #contenair .menu3 .liste_entrée .prix_entrée, #contenair .menu3 .liste_entrée .prix_plat, #contenair .menu3 .liste_entrée .prix_dessert, #contenair .menu3 .liste_plat .prix_entrée, #contenair .menu3 .liste_plat .prix_plat, #contenair .menu3 .liste_plat .prix_dessert, #contenair .menu3 .liste_dessert .prix_entrée, #contenair .menu3 .liste_dessert .prix_plat, #contenair .menu3 .liste_dessert .prix_dessert, #contenair .menu4 .liste_entrée .prix_entrée, #contenair .menu4 .liste_entrée .prix_plat, #contenair .menu4 .liste_entrée .prix_dessert, #contenair .menu4 .liste_plat .prix_entrée, #contenair .menu4 .liste_plat .prix_plat, #contenair .menu4 .liste_plat .prix_dessert, #contenair .menu4 .liste_dessert .prix_entrée, #contenair .menu4 .liste_dessert .prix_plat, #contenair .menu4 .liste_dessert .prix_dessert {
         font-size: 15px;
         font-weight: bolder;
-        margin-right: 20px; }
+        margin-right: 60px; }
       #contenair .menu1 .titre_entrée img, #contenair .menu1 .titre_plat img, #contenair .menu1 .titre_dessert img, #contenair .menu2 .titre_entrée img, #contenair .menu2 .titre_plat img, #contenair .menu2 .titre_dessert img, #contenair .menu3 .titre_entrée img, #contenair .menu3 .titre_plat img, #contenair .menu3 .titre_dessert img, #contenair .menu4 .titre_entrée img, #contenair .menu4 .titre_plat img, #contenair .menu4 .titre_dessert img {
         width: 120px;
-        height: 20px;
-        margin-top: 38px;
-        margin-bottom: 20px; }
+        height: 20px; }
       #contenair .menu1 h3, #contenair .menu2 h3, #contenair .menu3 h3, #contenair .menu4 h3 {
         font-size: 20px; }
       #contenair .menu1 h4, #contenair .menu2 h4, #contenair .menu3 h4, #contenair .menu4 h4 {
@@ -438,7 +441,7 @@ h2 {
 
   .presentation {
     margin-top: 50px; }
-    .presentation .menu1, .presentation .menu2, .presentation .menu3, .presentation .menu4 {
+    .presentation .menu1-2 .menu1, .presentation .menu1-2 .menu2, .presentation .menu1-2 .menu3, .presentation .menu1-2 .menu4, .presentation .menu3-4 .menu1, .presentation .menu3-4 .menu2, .presentation .menu3-4 .menu3, .presentation .menu3-4 .menu4 {
       width: 280px;
       height: 450px;
       border-radius: 10px;
@@ -483,6 +486,7 @@ h2 {
         flex-direction: column;
         justify-content: center; }
         #contenair .menu1 .liste_entrée li, #contenair .menu1 .liste_plat li, #contenair .menu1 .liste_dessert li, #contenair .menu2 .liste_entrée li, #contenair .menu2 .liste_plat li, #contenair .menu2 .liste_dessert li, #contenair .menu3 .liste_entrée li, #contenair .menu3 .liste_plat li, #contenair .menu3 .liste_dessert li, #contenair .menu4 .liste_entrée li, #contenair .menu4 .liste_plat li, #contenair .menu4 .liste_dessert li {
+          margin-top: 20px;
           margin-bottom: 20px;
           text-align: center; }
         #contenair .menu1 .liste_entrée .entrée, #contenair .menu1 .liste_entrée .plat, #contenair .menu1 .liste_entrée .dessert, #contenair .menu1 .liste_plat .entrée, #contenair .menu1 .liste_plat .plat, #contenair .menu1 .liste_plat .dessert, #contenair .menu1 .liste_dessert .entrée, #contenair .menu1 .liste_dessert .plat, #contenair .menu1 .liste_dessert .dessert, #contenair .menu2 .liste_entrée .entrée, #contenair .menu2 .liste_entrée .plat, #contenair .menu2 .liste_entrée .dessert, #contenair .menu2 .liste_plat .entrée, #contenair .menu2 .liste_plat .plat, #contenair .menu2 .liste_plat .dessert, #contenair .menu2 .liste_dessert .entrée, #contenair .menu2 .liste_dessert .plat, #contenair .menu2 .liste_dessert .dessert, #contenair .menu3 .liste_entrée .entrée, #contenair .menu3 .liste_entrée .plat, #contenair .menu3 .liste_entrée .dessert, #contenair .menu3 .liste_plat .entrée, #contenair .menu3 .liste_plat .plat, #contenair .menu3 .liste_plat .dessert, #contenair .menu3 .liste_dessert .entrée, #contenair .menu3 .liste_dessert .plat, #contenair .menu3 .liste_dessert .dessert, #contenair .menu4 .liste_entrée .entrée, #contenair .menu4 .liste_entrée .plat, #contenair .menu4 .liste_entrée .dessert, #contenair .menu4 .liste_plat .entrée, #contenair .menu4 .liste_plat .plat, #contenair .menu4 .liste_plat .dessert, #contenair .menu4 .liste_dessert .entrée, #contenair .menu4 .liste_dessert .plat, #contenair .menu4 .liste_dessert .dessert {
@@ -496,10 +500,10 @@ h2 {
         display: flex;
         flex-direction: column; }
         #contenair .menu1 .titre_entrée img, #contenair .menu1 .titre_plat img, #contenair .menu1 .titre_dessert img, #contenair .menu2 .titre_entrée img, #contenair .menu2 .titre_plat img, #contenair .menu2 .titre_dessert img, #contenair .menu3 .titre_entrée img, #contenair .menu3 .titre_plat img, #contenair .menu3 .titre_dessert img, #contenair .menu4 .titre_entrée img, #contenair .menu4 .titre_plat img, #contenair .menu4 .titre_dessert img {
+          margin-top: 0rem;
+          margin-bottom: 0rem;
           width: 180px;
-          height: 20px;
-          margin-top: 20px;
-          margin-bottom: 20px; }
+          height: 20px; }
       #contenair .menu1 h3, #contenair .menu2 h3, #contenair .menu3 h3, #contenair .menu4 h3 {
         font-size: 20px; }
       #contenair .menu1 h4, #contenair .menu2 h4, #contenair .menu3 h4, #contenair .menu4 h4 {
