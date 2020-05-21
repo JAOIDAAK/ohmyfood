@@ -419,6 +419,26 @@ h4{
 }    
     }
 } 
+.mention-legale{
+    padding-bottom: 120px;
+    h1{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    h3{
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    p{
+        text-align: justify;
+        font-size: 1.5em;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+} 
 
 
 @media all and (max-width: 840px){
@@ -589,6 +609,26 @@ h4{
         }
     }   
 }
+.mention-legale{
+    padding-bottom: 120px;
+    h1{
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    h3{
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    p{
+        text-align: justify;
+        font-size: 1em;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+} 
 
 
 
