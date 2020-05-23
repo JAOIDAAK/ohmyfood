@@ -2,21 +2,41 @@
 
 body{
     width: 100%;
-    margin: 0;
-    
+    margin: 0;    
 }
 
             /* mise en page header+footer+prochainement */
 #header{
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        background-color: #579c87;
+        h1{
+        color: #fdcb46;
+        text-align: center;
+        font-size: 4em;
+        }
+
+        a{
+            text-decoration: none;    
+        }
+    }
+
+
+
+    /*
     background-color: #579c87;
-    font-size: 3.3rem;
-    text-align: center;
-    font-weight: bolder;
-    padding: 5px 0px 5px 0px;    
+    margin-top: 0px;
+    h1{
+        color: #fdcb46;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bolder;
+        padding: 25px 0px 25px 0px;
+    }   
     a{
         text-decoration: none;    
     }
-}
+}*/
 #footer{
     background: #579C87;
     width: 100%; 
@@ -477,6 +497,14 @@ h4{
 }
 
 @media all and (max-width: 768px){
+#header{
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    h1{
+        text-align: center;
+        font-size: 3.5em;
+    }
+}    
 #contenair{
     width: 100%;
     margin-top: 40px;
@@ -518,7 +546,7 @@ h4{
     font-size: 24px;
 }    
 #loading {
-    width: 130px;
+    width: 160px;
     font-size: 20px;
     text-align: center;
 }        
@@ -632,14 +660,20 @@ h4{
 
 
 
-@media all and (max-width: 450px){   
+@media all and (max-width: 450px){ 
+#header{
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    h1{
+        font-size: 2.5em;
+    }
+}          
 #footer{
     font-size: 15px;
 }    
 #loading {
-    width: 130px;
+    width: 120px;
     font-size: 15px;
-    text-align: center;
 }    
 .presentation{            
     margin-top: 50px;
